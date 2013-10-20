@@ -8,5 +8,6 @@ import week3.NonEmpty
 
 object intsets {
 
-  new NonEmpty(3)
+  val t1 = new NonEmpty(3)
+  val t2 = t1 incl 4
 }
