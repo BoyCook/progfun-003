@@ -1,3 +1,5 @@
+import week3.{Nil, Cons, List}
+
 /**
  * User: boycook
  * Date: 20/10/2013
@@ -6,12 +8,54 @@
 
 object nth {
 
-  def nth[T](index: Int, items: List[T]): T =
-    if (index < 0 || index > items.length -1) throw new IndexOutOfBoundsException("Item.itemAtIndex.outOfBounds")
-    else items(index)
+  def nth[T](n: Int, items: List[T]): T =
+    if (items.isEmpty) throw new IndexOutOfBoundsException("Item not found")
+    else if (n == 0) items.head
+    else nth(n - 1, items.tail)
 
-  nth(0, List(1, 2, 3))
-  nth(1, List(1, 2, 3))
-  nth(2, List(1, 2, 3))
+  val list = new Cons(1, new Cons(2, new Cons(3, new Nil)))
+  nth(0, list)
+  nth(1, list)
+  nth(2, list)
+//  nth(-1, list)
+//  nth(4, list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
