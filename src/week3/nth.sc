@@ -6,12 +6,12 @@
 
 object nth {
 
-  def itemAtIndex[T](index: Int, items: List[T]): T =
+  def nth[T](index: Int, items: List[T]): T =
     if (index < 0 || index > items.length -1) throw new IndexOutOfBoundsException("Item.itemAtIndex.outOfBounds")
     else items(index)
 
-  itemAtIndex(0, List(1, 2, 3))
-  itemAtIndex(1, List(1, 2, 3))
-  itemAtIndex(2, List(1, 2, 3))
+  nth(0, List(1, 2, 3))
+  nth(1, List(1, 2, 3))
+  nth(2, List(1, 2, 3))
 
 }
